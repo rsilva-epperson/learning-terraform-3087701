@@ -39,7 +39,7 @@ vpc_id = data.aws_vpc.default.id
 resource "aws_security_group_rule" "blog_https_in" {
   type         = "ingress"
   from_port    = 443
-  to _port     = 443
+  to_port     = 443
   protocol     = "tcp"
   cider_blocks = ["0.0.0.0/0"]
 
@@ -49,7 +49,7 @@ resource "aws_security_group_rule" "blog_https_in" {
 resource "aws_security_group_rule" "blog_http_in" {
   type         = "ingress"
   from_port    = 80
-  to _port     = 80
+  to_port     = 80
   protocol     = "tcp"
   cider_blocks = ["0.0.0.0/0"]
 
@@ -59,7 +59,7 @@ resource "aws_security_group_rule" "blog_http_in" {
 resource "aws_security_group_rule" "blog_http_out" {
   type         = "engress"
   from_port    = 0
-  to _port     = 0
+  to_port     = 0
   protocol     = "-1"
   cider_blocks = ["0.0.0.0/0"]
 

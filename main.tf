@@ -67,7 +67,7 @@ egress_cidr_blocks = ["0.0.0.0/0"]
 module "blog_alb" {
   source = "terraform-aws-modules/alb/aws"
 
-  name    = "blog_alb"
+  name    = "blog-alb"
   vpc_id  = module.blog_vpc.vpc_id
   subnets = module.blog_vpc.public_subnets
 

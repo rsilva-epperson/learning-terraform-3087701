@@ -102,7 +102,7 @@ version = "9.2.0"
   image_id             = data.aws_ami.app_ami.id
 
   traffic_source_attachments = {
-    ${var.environment.name}-blog-alb = {
+    "${var.environment.name}-blog-alb" = {
       traffic_source_identifier = aws_lb_target_group.blog.arn
     }
   }

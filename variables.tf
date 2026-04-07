@@ -10,11 +10,12 @@ variable "ami_filter" {
     name  = string
     owner = string
   })
+
   default  = {
     name   = "bitnami-tomcat-*-x86_64-hvm-ebs-nami"
     owner  = "979382823631" # Bitnami
+  }
 }
-
 
 variable "environment" {
   description = "Deployment environment"
@@ -22,14 +23,12 @@ variable "environment" {
     name           = string
     network_prefix = string
   })
+
   default = {
     name           = "dev"
     network_prefix = "10.0"
+  }
 }
-
-
-
-
 
 variable "min_size" {
   description = "Minimum number of instances in the ASG"
@@ -38,7 +37,7 @@ variable "min_size" {
 
 variable "max_size" {
   description = "Maximum number of instances in the ASG"
-  default =12
+  default =2
 } 
 
 

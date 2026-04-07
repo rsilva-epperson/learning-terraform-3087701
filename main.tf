@@ -91,15 +91,6 @@ resource "aws_lb_target_group_attachment" "blog" {
 }
 
 
-module "blog_autoscaling" {
-source  = "terraform-aws-modules/autoscaling/aws"
-version = "9.2.0"
-
-name = "blog"
-
-min
-
-}
 
 module "blog_autoscaling" {
 source  = "terraform-aws-modules/autoscaling/aws"
